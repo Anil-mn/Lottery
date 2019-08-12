@@ -55,10 +55,10 @@
                         <p class="card-description">
                          select ticket and Check availability
                         </p>
-                        <form class="forms-sample" >
+                        <form class="forms-sample" action="php/book.php" >
                           <div class="form-group">
                             <label for="exampleInputEmail1">Ticket name</label>
-                            <select id="ticket"  class="form-control" aria-placeholder="ticket type">
+                            <select id="ticket" name='name' class="form-control" aria-placeholder="ticket type">
                                     <option>Ticket type</option>
                                     <option >Monsoon Bumper</option>
                                     <option  >pournami</option>
@@ -71,7 +71,7 @@
                           <button type="button" class="btn btn-success btn-fw" onclick="price()">Check Price</button>
                           <div class="form-group" id='demo'>
                             <label for="exampleInputPassword1">Select Ticket</label>
-                            <select id='num'  class="form-control" aria-placeholder="ticket type">
+                            <select id='num' name='number'  class="form-control" aria-placeholder="ticket type">
                                     <option>Ticket NUmber</option>
                                     <option id="1" onclick="vai()">kc-112345</option>
                                     <option id='2' onclick="vai()">kc-112346</option>
