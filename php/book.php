@@ -1,8 +1,8 @@
 <?php
 include('conn.php');
 
-$username=$_POST['name'];
-$password=$_POST['pass'];
+$name=$_POST['name'];
+$number=$_POST['number'];
 
 $query="INSERT INTO `user`(`username`, `password`) VALUES ('$username','$password')";
  
