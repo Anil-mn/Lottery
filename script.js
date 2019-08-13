@@ -1,9 +1,10 @@
 var test,test1,Rup,all
 function load(){
-     document.getElementById('num').style.visibility='hidden';
+     document.getElementById('demo').style.visibility='hidden';
      document.getElementById('bi').style.visibility='hidden';
      document.getElementById('btn').style.visibility='hidden';
-     document.getElementById('ne').style.visibility='hidden';
+     document.getElementById('disp').style.visibility='hidden';
+    
 
 }
 
@@ -54,9 +55,10 @@ function price(){
         test.innerHTML ="<h3> cost of a ticket is  "+Rup+"rs </h3>";
         test1 = one("price");  
         test1.innerHTML ="<h3>  winning Price of a ticket is  "+price+"rs </h3>";
-        document.getElementById('num').style.visibility='Visible';
+        document.getElementById('demo').style.visibility='Visible';
         document.getElementById('bi').style.visibility='Visible';
         document.getElementById('btn').style.visibility='hidden';
+        document.getElementById('ne').style.visibility='hidden';
 
 }
 function vai(){
@@ -66,6 +68,7 @@ function vai(){
         price='ticket is already booked try another one'
         test.innerHTML ="<h3>  "+price+" </h3>";
         one('btn').style.visibility='hidden';
+        one('ne').style.visibility='hidden';
     }
     else{
         
@@ -73,11 +76,12 @@ function vai(){
         price='selected ticket is available '
         test.innerHTML ="<h3>  "+price+" </h3>";
         one('btn').style.visibility='visible'
+        one('ne').style.visibility='hidden';
     }
 all=ltnum
 }
 function bu(){
-    one('io').style.visibility='visible'
+    one('ne').style.visibility='visible'
     test = one("disp");  
        test.innerHTML ="<br><h3> you bought ticket number"+"  "+"  "+all+"  For rs   "+Rup+"  </h3>";
     

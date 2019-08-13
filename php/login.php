@@ -12,6 +12,6 @@ if(isset($check)){
 		 header('location: ../main.html');
 		
 	}
-	else header('Location:../login.html');{
+	    else header('Location:../login.html');{
 		
 	}

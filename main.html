@@ -51,7 +51,7 @@
                         <form class="forms-sample" action="php/book.php" method="Post">
                           <div class="form-group">
                             <label for="exampleInputEmail1">Ticket name</label>
-                            <select id="ticket" name='name' class="form-control" aria-placeholder="ticket type">
+                            <select id="ticket" name='tcname' class="form-control" aria-placeholder="ticket type">
                                     <option  >Ticket type</option>
                                     <option value="Monsoon Bumper" >Monsoon Bumper</option>
                                     <option  value="pournami">pournami</option>
@@ -64,7 +64,7 @@
                           <button type="button" class="btn btn-success btn-fw" onclick="price()">Check Price</button>
                           <div class="form-group" id='demo' >
                             <label for="exampleInputPassword1">Select Ticket</label>
-                            <select id='num' name='number'  class="form-control" aria-placeholder="ticket type">
+                            <select id='num' name='tcnumber'  class="form-control" aria-placeholder="ticket type">
                                     <option>Ticket NUmber</option>
                                     <option value="kc-112345" onclick="vai()">kc-112345</option>
                                     <option value="kc-112346" onclick="vai()">kc-112346</option>
@@ -80,31 +80,30 @@
                     </div>
                   <div class="col-md-6 grid-margin stretch-card">
                         <div class="card">
-                          <div class="card-body" >
+                          <div class="card-body" id='bi'>
                             <h4 class="card-title"></h4>
-                              <div class="form-group" id='bi'>
+                              <div class="form-group" >
                                     <p class="text-info" id='Rupees'></p>
                               </div>
-                              <div class="form-group" id='bi'>
+                              <div class="form-group">
                                     <p class="text-primary" id='price'></p>
                               </div>
-                              <div class="form-group" id='bi'>
+                              <div class="form-group" >
                                 <h3 ></h3>
                                 <p class="text-success" id='vai'></p>
                                 <p class="text-danger" id='vai2'></p>
                               </div>
                               <div class="form-group">    
-                                    <p class="text-primary"  id='disp'></p>
+                                    <p class="text-primary"></p>
+                                    <input type="number" name='number' required class="form-control" id="ne" placeholder="phone number">
                                     <button id='btn' class="btn btn-success btn-fw" onclick="bu()">Buy</button>
-                                    <button type="submit" class="btn btn-light">Cancel</button>
+                                    <button   class="btn btn-light">Cancel</button>
                                     </div>
-                                    <div class="form-group" >
-                                      <h3 ></h3>
-                                      <input type="number" required  name="username" id='ne'  class="form-control"  aria-describedby="emailHelp" placeholder="Username">
-                                      
-                                    </div>
-                                  </div>
                                    
+                                  </div>
+                                 
+                                  </div>
+                                 
                             </form>
                           </div>
                         </div>
