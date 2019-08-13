@@ -1,5 +1,5 @@
 <?php
-require_once('conn.php');
+require_once('conn.php');// connection to local host
 SESSION_START();
 $username = $_POST["username"];
 $password = $_POST["pass"];

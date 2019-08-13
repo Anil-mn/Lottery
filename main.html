@@ -9,9 +9,6 @@
 <body onload="load()">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-
-     
-    
             <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
                     <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
                       <a class="navbar-brand brand-logo" href="index.html"><img src="images/logo.svg" alt="logo out"></a>
@@ -28,19 +25,15 @@
                         <li class="nav-item">
                           <a href="profile.html" class="nav-link"><i class="mdi mdi-calendar"></i>profile</a>
                         </li>
-                        
                       </ul>
-                    
                       <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
                         <span class="icon-menu"></span>
                       </button>
                     </div>
                   </nav>
-   
     <br>             
     <br>
     <div class="card-body"></div>
-    
             <div class="main-panel">
                     <div class="content-wrapper">
                       <div class="row">
@@ -55,79 +48,69 @@
                         <p class="card-description">
                          select ticket and Check availability
                         </p>
-                        <form class="forms-sample" action="php/book.php" >
+                        <form class="forms-sample" action="php/book.php" method="Post">
                           <div class="form-group">
                             <label for="exampleInputEmail1">Ticket name</label>
                             <select id="ticket" name='name' class="form-control" aria-placeholder="ticket type">
-                                    <option>Ticket type</option>
-                                    <option >Monsoon Bumper</option>
-                                    <option  >pournami</option>
-                                    <option  >win win</option>
-                                    <option  >sthre shakthi</option>
-                                    <option  >Akshaya</option>
-                                    <option  >karunya</option>
+                                    <option  >Ticket type</option>
+                                    <option value="Monsoon Bumper" >Monsoon Bumper</option>
+                                    <option  value="pournami">pournami</option>
+                                    <option  value="win win">win win</option>
+                                    <option  value="sthre shakthi">sthre shakthi</option>
+                                    <option  value="Akshaya">Akshaya</option>
+                                    <option  value="karunya">karunya</option>
                                </select> 
                           </div>
                           <button type="button" class="btn btn-success btn-fw" onclick="price()">Check Price</button>
-                          <div class="form-group" id='demo'>
+                          <div class="form-group" id='demo' >
                             <label for="exampleInputPassword1">Select Ticket</label>
                             <select id='num' name='number'  class="form-control" aria-placeholder="ticket type">
                                     <option>Ticket NUmber</option>
-                                    <option id="1" onclick="vai()">kc-112345</option>
-                                    <option id='2' onclick="vai()">kc-112346</option>
-                                    <option id='3' onclick="vai()">kc-112347</option>
-                                    <option onclick="vai()"> kc-112348</option>
+                                    <option value="kc-112345" onclick="vai()">kc-112345</option>
+                                    <option value="kc-112346" onclick="vai()">kc-112346</option>
+                                    <option value="kc-112347" onclick="vai()">kc-112347</option>
+                                    <option value="kc-112348" onclick="vai()"> kc-112348</option>
                                </select>
                                <button type="button" class="btn btn-success btn-fw" onclick="vai()">Check availability</button>
+                              </div>
+                           </div>
                           </div>
-                          
-                          
-                        </form>
-                      </div>
+                         </div>
+                       </div>
                     </div>
-                    </div>
-                    </div>
-                  </div>
                   <div class="col-md-6 grid-margin stretch-card">
                         <div class="card">
-                          <div class="card-body" id='bi'>
+                          <div class="card-body" >
                             <h4 class="card-title"></h4>
-                           
-                            <form class="forms-sample" action='php/book.php' me>
-                              <div class="form-group">
-                                   
+                              <div class="form-group" id='bi'>
                                     <p class="text-info" id='Rupees'></p>
                               </div>
-                              <div class="form-group">
-                                    
+                              <div class="form-group" id='bi'>
                                     <p class="text-primary" id='price'></p>
-                                    
                               </div>
-                              <div class="form-group">
+                              <div class="form-group" id='bi'>
                                 <h3 ></h3>
                                 <p class="text-success" id='vai'></p>
                                 <p class="text-danger" id='vai2'></p>
                               </div>
-                              <div class="form-group">
-                                    
+                              <div class="form-group">    
                                     <p class="text-primary"  id='disp'></p>
-                                    <button type="button" id='btn' class="btn btn-success btn-fw" href='php/book.php'>Buy</button>
-                              <button class="btn btn-light">Cancel</button>
+                                    <button id='btn' class="btn btn-success btn-fw" onclick="bu()">Buy</button>
+                                    <button type="submit" class="btn btn-light">Cancel</button>
+                                    </div>
+                                    <div class="form-group" >
+                                      <h3 ></h3>
+                                      <input type="number" required  name="username" id='ne'  class="form-control"  aria-describedby="emailHelp" placeholder="Username">
+                                      
+                                    </div>
+                                  </div>
+                                   
                             </form>
                           </div>
                         </div>
                       </div>
-      <br>
-       
-       <br>
-       <br>
-      
-       <br> <br>
-       
-       
-    </form>
-    <div>
-        
+    
+    <div></div>
     </div>
     </div>
 </body>

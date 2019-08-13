@@ -1,8 +1,9 @@
 var test,test1,Rup,all
 function load(){
-     document.getElementById('demo').style.visibility='hidden';
+     document.getElementById('num').style.visibility='hidden';
      document.getElementById('bi').style.visibility='hidden';
      document.getElementById('btn').style.visibility='hidden';
+     document.getElementById('ne').style.visibility='hidden';
 
 }
 
@@ -53,7 +54,7 @@ function price(){
         test.innerHTML ="<h3> cost of a ticket is  "+Rup+"rs </h3>";
         test1 = one("price");  
         test1.innerHTML ="<h3>  winning Price of a ticket is  "+price+"rs </h3>";
-        document.getElementById('demo').style.visibility='Visible';
+        document.getElementById('num').style.visibility='Visible';
         document.getElementById('bi').style.visibility='Visible';
         document.getElementById('btn').style.visibility='hidden';
 
@@ -75,8 +76,8 @@ function vai(){
     }
 all=ltnum
 }
-function buy(){
-    alert('proceeding to payment')
+function bu(){
+    one('io').style.visibility='visible'
     test = one("disp");  
        test.innerHTML ="<br><h3> you bought ticket number"+"  "+"  "+all+"  For rs   "+Rup+"  </h3>";
     
