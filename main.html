@@ -8,16 +8,15 @@
     <script src="script.js"></script>
 <body onload="load()">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
-            <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-                    <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
-                      <a class="navbar-brand brand-logo" href="index.html"><img src="images/logo.svg" alt="logo out"></a>
-                      <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg" alt="logo"></a>
-                    </div>
-                    <div class="navbar-menu-wrapper d-flex align-items-center">
-                      <ul class="navbar-nav navbar-nav-left header-links d-none d-md-flex">
-                        <li class="nav-item active">
-                          <a href="#" class="nav-link"><i class="mdi mdi-image-filter"></i>BuyTicket</a>
+</head> 
+< <div class="container-scroller">
+  <!-- partial:partials/_navbar.html -->
+  <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+    
+    <div class="navbar-menu-wrapper d-flex align-items-center">
+      <ul class="navbar-nav navbar-nav-left header-links d-none d-md-flex">
+        <li class="nav-item">
+                        <a href="#" class="nav-link"><i class="mdi mdi-image-filter"></i>BuyTicket</a>
                         </li>
                         <li class="nav-item">
                           <a href="draw.html" class="nav-link"><i class="mdi mdi-email-outline"></i>Draw</a>
@@ -32,6 +31,7 @@
                     </div>
                   </nav>
     <br>             
+      
     <br>
     <div class="card-body"></div>
             <div class="main-panel">
@@ -51,13 +51,13 @@
                         <form class="forms-sample" action="php/book.php" method="Post">
                           <div class="form-group">
                             <label for="exampleInputEmail1">Ticket name</label>
-                            <select id="ticket" name='tcname' class="form-control" aria-placeholder="ticket type">
-                                    <option  >Ticket type</option>
-                                    <option value="Monsoon Bumper" >Monsoon Bumper</option>
+                            <select id="ticket"  name='tcname' class="form-control" aria-placeholder="ticket type">
+                                    <option   >Ticket type</option>
+                                    <option  value="Monsoon Bumper" >Monsoon Bumper</option>
                                     <option  value="pournami">pournami</option>
                                     <option  value="win win">win win</option>
                                     <option  value="sthre shakthi">sthre shakthi</option>
-                                    <option  value="Akshaya">Akshaya</option>
+                                    <option value="Akshaya">Akshaya</option>
                                     <option  value="karunya">karunya</option>
                                </select> 
                           </div>

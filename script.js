@@ -1,15 +1,20 @@
 var test,test1,Rup,all
+
+
+
+
+function one(x){
+    return document.getElementById(x); }
 function load(){
+    
      document.getElementById('demo').style.visibility='hidden';
      document.getElementById('bi').style.visibility='hidden';
      document.getElementById('btn').style.visibility='hidden';
-     document.getElementById('disp').style.visibility='hidden';
+     //document.getElementById('disp').style.visibility='hidden';
     
 
 }
 
-function one(x){
-    return document.getElementById(x); }
 function login()
 {
     var name = document.getElementById('name').value;
