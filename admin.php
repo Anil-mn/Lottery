@@ -10,10 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
             <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-                    <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
-                      <a class="navbar-brand brand-logo" href="index.html"><img src="images/logo.svg" alt="logo out"></a>
-                      <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg" alt="logo"></a>
-                    </div>
+                    <
                     <div class="navbar-menu-wrapper d-flex align-items-center">
                       <ul class="navbar-nav navbar-nav-left header-links d-none d-md-flex">
                         <li class="nav-item active">
@@ -93,7 +90,7 @@
                 </div>
               </div>
             </div>
-            <div class="row" id='30'>
+            div class="row" id='29'>
             <div class="col-lg-6 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
@@ -119,3 +116,7 @@
                  { 
                  echo "<tr><td>".$row['id']."</td><td>".$row['phno']."</td><td>".$row['tcname']."</td><td>".$row['number']."</td></tr>"; 
                   }?>
+                  </table>
+                </div>
+                </div>
+                </div>
