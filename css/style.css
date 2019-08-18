@@ -7882,7 +7882,7 @@ pre {
 
 .row {
   display: flex;
- opacity: 0.98;
+ opacity: 0.97;
   flex-wrap: wrap;
   margin-right: -10px;
   margin-left: -10px; }
@@ -7910,7 +7910,7 @@ pre {
 .col {
   flex-basis: 0;
   flex-grow: 1;
-  
+  opacity: 0.97;
   max-width: 100%; }
 
 .col-auto {
@@ -7964,7 +7964,7 @@ pre {
 
 .col-12 {
   flex: 0 0 100%;
-  opacity: 0.87;
+  opacity: 0.97;
   max-width: 100%; }
 
 .order-first {
