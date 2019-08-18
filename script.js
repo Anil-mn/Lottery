@@ -1,16 +1,16 @@
-var test,test1,Rup,all
-var start=100000
-var end=100010
-var options=''
+var test,test1,Rup,all //variable declarations
+
 
 
 function one(x){
-    return document.getElementById(x); }
-function load(){
+    return document.getElementById(x); //function for all getelement
+}
+load=()=>{
     
      document.getElementById('demo').style.visibility='hidden';
      document.getElementById('bi').style.visibility='hidden';
      document.getElementById('btn').style.visibility='hidden';
+     //Hidding elements
      
     
 
@@ -30,66 +30,75 @@ login=()=>
 }
 
 price=()=>{
- 
+    //price validation of lotteries
     var Rupees= document.getElementById('ticket').value;
    
     if(Rupees=='Monsoon Bumper'){
        
         Rup=200
-        price='5 crore'}
+        price='5 കോടി '}
      
     if(Rupees=='pournami'){
             Rup=30
-           price='70,00000'}
+           price='70,ലക്ഷം '}
     else if(Rupees=='pournami'){
         Rup=30
-        price='70,00000'}
+        price='70,ലക്ഷം '}
 
       else if(Rupees=='win win'){
             Rup=30
-            price='65,00000'}
+            price='65,ലക്ഷം '}
            else  if(Rupees=='sthre shakthi'){
                 Rup=30
-                price='60,0000'}
+                price='60,ലക്ഷം '}
                else if(Rupees=='Akshaya'){
                     Rup=50
-                    price='1coroe'}
+                    price='1 coroe'}
                    else  if(Rupees=='karunyaa'){
                         Rup=50
-                        price='6 croro'}
+                        price='6 കോടി'}
        
         test = one("Rupees");  
-        test.innerHTML ="<h3> Cost of a ticket is  "+Rup+"rs </h3>";
+        test.innerHTML ="<h3> ടിക്കറ്റിന്റെ വില   "+Rup+"       rs </h3>";
         test1 = one("price");  
-        test1.innerHTML ="<h3>  Winning Price of a ticket is  "+price+"rs </h3>";
+        test1.innerHTML ="<h3>  സമ്മാനത്തുക  "+price+"rs </h3>";
         document.getElementById('demo').style.visibility='Visible';
         document.getElementById('bi').style.visibility='Visible';
         document.getElementById('btn').style.visibility='hidden';
         document.getElementById('ne').style.visibility='hidden';
+        document.getElementById('vai2').style.visibility='hidden';
+        
+
 
 }
 vai=()=>{
+    //availability of lottery number
     var ltnum= document.getElementById('num').value;
     if(ltnum=='kc-112346'){
         test = one("vai");  
+
         test.className='text-danger'
-        price='Ticket is already booked try another one'
-        test.innerHTML ="<h3>  "+price+" </h3>";
+        test.innerHTML ="<h3>  Ticket is already booked try another one </h3>";
         one('btn').style.visibility='hidden';
         one('ne').style.visibility='hidden';
+        one('vai2').style.visibility='visible'
+        one('vai2').innerHTML=ltnum
     }
     else{
         
-        test = one("vai");  
-        test.className='text-success'
-        price='Selected ticket is available ' 
-        test.innerHTML ="<h3>  "+price+" </h3>";
+        test = one("vai"); 
+        test.className='text-success';
+        test.innerHTML ="<h3>  Selected ticket is available  </h3>";
         one('btn').style.visibility='visible'
         one('ne').style.visibility='hidden';
+        one('vai2').style.visibility='visible'
+        one('vai2').innerHTML=ltnum
     }
-all=ltnum
+all=ltnum 
+       
 }
 bu=()=>{
+    //Buying of lottery
     one('ne').style.visibility='visible'
     test = one("disp");  
        test.innerHTML ="<br><h3> you bought ticket number"+"  "+"  "+all+"  For rs   "+Rup+"  </h3>";

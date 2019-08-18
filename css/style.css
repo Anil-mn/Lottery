@@ -7442,7 +7442,8 @@ html {
 article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block; }
   .bg-default {
-    background: url("../images/auth/register2.jpg");
+    background: url("../images/kerala-lottery.jpg");
+    background-size: cover;
     background-color: #172b4d !important;
   }
   
@@ -7454,7 +7455,8 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
   }
   
 body {
-  background: url("../images/auth/register2.jpg");
+  background: url("../images/kerala-lottery.jpg");
+  background-size: cover;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1rem;
@@ -7880,6 +7882,7 @@ pre {
 
 .row {
   display: flex;
+ opacity: 0.98;
   flex-wrap: wrap;
   margin-right: -10px;
   margin-left: -10px; }
@@ -7907,6 +7910,7 @@ pre {
 .col {
   flex-basis: 0;
   flex-grow: 1;
+  
   max-width: 100%; }
 
 .col-auto {
@@ -7960,6 +7964,7 @@ pre {
 
 .col-12 {
   flex: 0 0 100%;
+  opacity: 0.87;
   max-width: 100%; }
 
 .order-first {
@@ -10409,7 +10414,9 @@ tbody.collapse.show {
 
 .card {
   position: relative;
+  
   display: flex;
+  
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
@@ -10429,7 +10436,9 @@ tbody.collapse.show {
 
 .card-body {
   flex: 1 1 auto;
-  padding: 1.25rem; }
+  opacity: 0.87;
+  padding: 1.25rem;
+    }
 
 .card-title {
   margin-bottom: 0.75rem; }
@@ -14316,7 +14325,8 @@ address p {
   margin-bottom: 0.9375rem;
   font-family: "Poppins", sans-serif; }
   .rtl .card-description {
-    text-align: right; }
+    text-align: right;
+   }
 
 .font-weight-normal {
   font-weight: 400; }
@@ -15623,4 +15633,4 @@ select.form-control {
   .error-page .error-page-divider {
     border-left: 3px solid rgba(255, 255, 255, 0.2); } }
 
-/*# sourceMappingURL=maps/style.css.map */
+/* sourceMappingURL=maps/style.css.map */

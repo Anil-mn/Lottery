@@ -75,7 +75,7 @@
                     <thead>
                       <tr>
                       <th>id</th>
-                        <th>Phone Number</th>
+                        <th >Phone Number</th>
                         <th>Ticket Name</th>
                         <th>Ticket number</th>
                       </tr>
@@ -83,7 +83,7 @@
                     <?php
                    while($row = mysqli_fetch_array($query))
                  { 
-                 echo "<tr><td>".$row['id']."</td><td>".$row['phno']."</td><td>".$row['tcname']."</td><td>".$row['number']."</td></tr>"; 
+                 echo "<tr><td>".$row['id']."</td><td>".$row['phno']."</td><td>".$row['tcname']."</td ><td>".$row['number']."</td></tr>"; 
                   }?>
                   </table>
                 </div>
