@@ -1,6 +1,7 @@
 var test,test1,Rup,all
-
-
+var start=100000
+var end=100010
+var options=''
 
 
 function one(x){
@@ -10,12 +11,11 @@ function load(){
      document.getElementById('demo').style.visibility='hidden';
      document.getElementById('bi').style.visibility='hidden';
      document.getElementById('btn').style.visibility='hidden';
-     //document.getElementById('disp').style.visibility='hidden';
+     
     
 
 }
-
-function login()
+login=()=>
 {
     var name = document.getElementById('name').value;
     var pas=document.getElementById('pas').value;
@@ -28,11 +28,13 @@ function login()
     }
    
 }
-function price(){
+
+price=()=>{
  
     var Rupees= document.getElementById('ticket').value;
    
     if(Rupees=='Monsoon Bumper'){
+       
         Rup=200
         price='5 crore'}
      
@@ -57,20 +59,21 @@ function price(){
                         price='6 croro'}
        
         test = one("Rupees");  
-        test.innerHTML ="<h3> cost of a ticket is  "+Rup+"rs </h3>";
+        test.innerHTML ="<h3> Cost of a ticket is  "+Rup+"rs </h3>";
         test1 = one("price");  
-        test1.innerHTML ="<h3>  winning Price of a ticket is  "+price+"rs </h3>";
+        test1.innerHTML ="<h3>  Winning Price of a ticket is  "+price+"rs </h3>";
         document.getElementById('demo').style.visibility='Visible';
         document.getElementById('bi').style.visibility='Visible';
         document.getElementById('btn').style.visibility='hidden';
         document.getElementById('ne').style.visibility='hidden';
 
 }
-function vai(){
+vai=()=>{
     var ltnum= document.getElementById('num').value;
     if(ltnum=='kc-112346'){
-        test = one("vai2");  
-        price='ticket is already booked try another one'
+        test = one("vai");  
+        test.className='text-danger'
+        price='Ticket is already booked try another one'
         test.innerHTML ="<h3>  "+price+" </h3>";
         one('btn').style.visibility='hidden';
         one('ne').style.visibility='hidden';
@@ -78,14 +81,15 @@ function vai(){
     else{
         
         test = one("vai");  
-        price='selected ticket is available '
+        test.className='text-success'
+        price='Selected ticket is available ' 
         test.innerHTML ="<h3>  "+price+" </h3>";
         one('btn').style.visibility='visible'
         one('ne').style.visibility='hidden';
     }
 all=ltnum
 }
-function bu(){
+bu=()=>{
     one('ne').style.visibility='visible'
     test = one("disp");  
        test.innerHTML ="<br><h3> you bought ticket number"+"  "+"  "+all+"  For rs   "+Rup+"  </h3>";
