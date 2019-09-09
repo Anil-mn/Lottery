@@ -1,7 +1,4 @@
 var test,test1,Rup,all //variable declarations
-
-
-
 function one(x){
     return document.getElementById(x); //function for all getelement
 }
@@ -11,30 +8,12 @@ load=()=>{
      document.getElementById('bi').style.visibility='hidden';
      document.getElementById('btn').style.visibility='hidden';
      //Hidding elements
-     
-    
 
 }
-login=()=>
-{
-    var name = document.getElementById('name').value;
-    var pas=document.getElementById('pas').value;
-    if (name=='anil' && pas=='123')
-    {
-   
-    window.location.href= 'main.html';
-    return false;
-    
-    }
-   
-}
-
 price=()=>{
     //price validation of lotteries
     var Rupees= document.getElementById('ticket').value;
-   
     if(Rupees=='Monsoon Bumper'){
-       
         Rup=200
         price='5 കോടി '}
      
@@ -59,9 +38,9 @@ price=()=>{
                         price='6 കോടി'}
        
         test = one("Rupees");  
-        test.innerHTML ="<h3> ടിക്കറ്റിന്റെ വില   "+Rup+"       rs </h3>";
+        test.innerHTML ="<h3> ടിക്കറ്റിന്റെ വില   "+Rup+"</h3>";
         test1 = one("price");  
-        test1.innerHTML ="<h3>  സമ്മാനത്തുക  "+price+"rs </h3>";
+        test1.innerHTML ="<h3>  സമ്മാനത്തുക  "+price+"</h3>";
         document.getElementById('demo').style.visibility='Visible';
         document.getElementById('bi').style.visibility='Visible';
         document.getElementById('btn').style.visibility='hidden';
@@ -78,7 +57,7 @@ vai=()=>{
         test = one("vai");  
 
         test.className='text-danger'
-        test.innerHTML ="<h3>  Ticket is already booked try another one </h3>";
+        test.innerHTML ="<h3>  Ticket is already booked try  another one </h3>";
         one('btn').style.visibility='hidden';
         one('ne').style.visibility='hidden';
         one('vai2').style.visibility='visible'

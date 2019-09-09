@@ -9,9 +9,8 @@
 <body onload="load()">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-            <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-                    <
-                    <div class="navbar-menu-wrapper d-flex align-items-center">
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row"> 
+        <div class="navbar-menu-wrapper d-flex align-items-center">
                       <ul class="navbar-nav navbar-nav-left header-links d-none d-md-flex">
                         <li class="nav-item active">
                           <a href="#29" class="nav-link"><i class="mdi mdi-image-filter"></i>Details of user</a>
@@ -19,25 +18,23 @@
                         <li class="nav-item">
                           <a href="#30" class="nav-link"><i class="mdi mdi-email-outline"></i>Draw</a>
                         </li>
-                        
                       </ul>
                       <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
                         <span class="icon-menu"></span>
                       </button>
                     </div>
                   </nav>
-
-                  <div class="row" id='29'>
+           <div class="row" id='29'>
             <div class="col-lg-6 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">User Details</h4>
-                  <p class="card-description">
+                   <p class="card-description">
                     Details of users <code></code>
                   </p>
                   <?php
-				  include('php/conn.php');
-                  $query = mysqli_query($con, "SELECT * FROM `user`");
+				           include('php/conn.php');
+                   $query = mysqli_query($con, "SELECT * FROM `user`");
                   ?>
                   <table class="table">
                     <thead>
@@ -59,7 +56,7 @@
                 </div>
               </div>
             </div>
-            div class="row" id='29'>
+         
             <div class="col-lg-6 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
