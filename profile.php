@@ -206,7 +206,6 @@
                    <label for="exampleInputEmail1">Ticket number</label>
                   <input type='text' name='tnumber' id='tnum'>
                   <button type="submit"  name='check'  class="btn btn-success btn-fw">Check Price</button><br>
-                  <button type="submit" name='confirm'  class="btn btn-success btn-fw" >Confirm</button>
                 </form>
                 <?php
                 include('php/conn.php');
@@ -289,10 +288,6 @@
                               style="margin-left: 90%;
                                     margin-top:-20%;">Book</button>
                                      </form>
-
-           
-             
-                 
                 </div>
               </div>
             </div>
