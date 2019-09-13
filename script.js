@@ -1,3 +1,4 @@
+
 var test,test1,Rup,all //variable declarations
 function one(x){
     return document.getElementById(x); //function for all getelement
@@ -82,4 +83,7 @@ bu=()=>{
     test = one("disp");  
        test.innerHTML ="<br><h3> you bought ticket number"+"  "+"  "+all+"  For rs   "+Rup+"  </h3>";
     
+}
+check =()=>{
+    alert('hlo')
 }
