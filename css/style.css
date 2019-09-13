@@ -7441,29 +7441,14 @@ html {
 
 article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block; }
-  .bg-default {
-    background: url("../images/kerala-lottery.jpg");
-    background-size: cover;
-    background-color: #172b4d !important;
-  }
-  
-  a.bg-default:hover,
-  a.bg-default:focus,
-  button.bg-default:hover,
-  button.bg-default:focus {
-    background-color: #0b1526 !important;
-  }
-  
+
 body {
-  background: url("../images/kerala-lottery.jpg");
-  background-size: cover;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-
   text-align: left;
   background-color: #fff; }
 
@@ -7637,7 +7622,7 @@ button::-moz-focus-inner,
   border-style: none; }
 
 input[type="radio"],
-input[type="checkbox"][type="text"] {
+input[type="checkbox"] {
   box-sizing: border-box;
   padding: 0; }
 
@@ -7882,7 +7867,6 @@ pre {
 
 .row {
   display: flex;
- opacity: 0.97;
   flex-wrap: wrap;
   margin-right: -10px;
   margin-left: -10px; }
@@ -7910,7 +7894,6 @@ pre {
 .col {
   flex-basis: 0;
   flex-grow: 1;
-  opacity: 0.97;
   max-width: 100%; }
 
 .col-auto {
@@ -7964,7 +7947,6 @@ pre {
 
 .col-12 {
   flex: 0 0 100%;
-  opacity: 0.97;
   max-width: 100%; }
 
 .order-first {
@@ -8604,20 +8586,13 @@ pre {
 
 .table-dark {
   color: #fff;
-  background-color: #212529;
-      width: 110px;
-    height: 110px;
-    overflow: scroll;
-
-    }
+  background-color: #212529; }
   .table-dark th,
   .table-dark td,
   .table-dark thead th {
-	 
     border-color: #32383e; }
   .table-dark.table-bordered {
-    border: 0; 
-	}
+    border: 0; }
   .table-dark.table-striped tbody tr:nth-of-type(odd) {
     background-color: rgba(255, 255, 255, 0.05); }
   .table-dark.table-hover tbody tr:hover {
@@ -10414,9 +10389,7 @@ tbody.collapse.show {
 
 .card {
   position: relative;
-  
   display: flex;
-  
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
@@ -10436,9 +10409,7 @@ tbody.collapse.show {
 
 .card-body {
   flex: 1 1 auto;
-  opacity: 0.87;
-  padding: 1.25rem;
-    }
+  padding: 1.25rem; }
 
 .card-title {
   margin-bottom: 0.75rem; }
@@ -14325,8 +14296,7 @@ address p {
   margin-bottom: 0.9375rem;
   font-family: "Poppins", sans-serif; }
   .rtl .card-description {
-    text-align: right;
-   }
+    text-align: right; }
 
 .font-weight-normal {
   font-weight: 400; }
@@ -15542,11 +15512,11 @@ select.form-control {
 /* === Landing screens === */
 /* Auth */
 .auth.login-full-bg {
-  background: url("../images/auth/register2.jpg");
+  background: url("../images/auth/login_1.jpg");
   background-size: cover; }
 
 .auth.register-full-bg {
-  background: url("../images/auth/register2.jpg");
+  background: url("../images/auth/register_1.jpg");
   background-size: cover; }
 
 .auth .auth-form-dark {
@@ -15633,4 +15603,4 @@ select.form-control {
   .error-page .error-page-divider {
     border-left: 3px solid rgba(255, 255, 255, 0.2); } }
 
-/* sourceMappingURL=maps/style.css.map */
+/*# sourceMappingURL=maps/style.css.map */

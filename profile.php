@@ -1,7 +1,7 @@
 <?php
  SESSION_START();
  if(!isset($_SESSION['username'])){
-	header('location:admin.php');
+	header('location:index.html');
  }
  else{
    $number=$_SESSION['username'];
@@ -30,10 +30,10 @@
   <!-- endinject -->
   <link rel="shortcut icon" href="images/favicon.png" />
   <!-- Linking of javaScript-->
-  <script src="script.js"></script>
+  
 </head>
 
-<body>
+<body >
   <div class="container-scroller">
     <!-- partial:../../partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
@@ -105,7 +105,7 @@
          
           </li>
           
-          <li class="nav-item purchase-button"><a class="nav-link" href="https://www.bootstrapdash.com/product/star-admin-pro/" target="_blank">Log out</a></li>
+          <li class="nav-item purchase-button"><a class="nav-link" href="php/logout.php" target="_blank">Logout</a></li>
         </ul>
       </nav>
       <!-- partial -->
@@ -214,16 +214,26 @@
                 if(isset($_POST['check'])){
                   $ticketname=$_POST['tcname'];
                   $ticket=$_POST['tnumber'];
+
+
+               $result =mysqli_query($con, "SELECT * FROM `draw` Where `name`='$ticketname'");
+               while($row = mysqli_fetch_row($result)){
+                 $ser=$row[3];
+                }
+
+ 
+
                   $query = mysqli_query($con, "SELECT * FROM `book`");
                   while($row = mysqli_fetch_array($query)){
-                    if($row['number']==$ticket){
+                    if($row['number']==$ser.'-'.$ticket){
                       echo "<p class='text-success' id='vai'>ticket is already booked </p>";
                       break;
-                    // }
+                     
                   }else
                   {
                       echo "<p class='text-success' id='vai'>ticket is not yet booked </p>";
                       break;
+                      
                   }
                 }
               }
@@ -236,17 +246,19 @@
             </div>
            
             <div class="col-lg-12 grid-margin stretch-card">
-              <div class="card" >
-                <div class="card-body" style="background-image: url(images/lottery.jpg);background-size: cover; height:500px; " >
+              <div class="card" id='mytic' >
+                <div class="card-body"  style="background-image: url(images/lottery.jpg);background-size: cover; height:500px; " >
                 <p class="card-description">
                     Click  <code>.BOOK</code>
                   </p>
-                  <form action='' method='POST'>
+                  <form action='php/book.php' method='POST'>
                 <?php
                 include('php/conn.php');
+                if(isset($_POST['check'])){
                 $ticketname =$_POST['tcname'];
                 $ticketnumber=$_POST['tnumber'];
                 echo "<h4 class='card-title' >".$ticketname."</h4>";
+                echo "<input type='hidden' name='tcname' value='".$ticketname."'>";
                 $query = mysqli_query($con, "SELECT * FROM `draw` Where `name`='$ticketname'");
                 while($row = mysqli_fetch_row($query)){
                 echo "<div class='form-group' >
@@ -255,21 +267,30 @@
                 echo "<div class='form-group' >
                 <p class='text-dark' style='font-size:50px' id='Rupees'>".$row[4]."</p>
                </div>";
+               $result =mysqli_query($con, "SELECT * FROM `draw` Where `name`='$ticketname'");
+               while($row = mysqli_fetch_row($result)){
+                 $ser=$row[3];
+                }
+              
                echo " <div class='form-group' >
-               <p class='text-dark' id='vai2' style='margin-left: 18%;
-                                 font-size:30px;margin-top:7%;'>".$ticketnumber."</p>";
+               <p class='text-dark' name='tcnumber' id='vai2' style='margin-left: 16%;
+                                 font-size:30px;margin-top:7%;'>".$ser."-".$ticketnumber."</p></div>";
                  
-                 echo " <p class='text-dark' id='vai2' style='margin-left: 78%;
-                 font-size:30px;margin-top:-5%;'>".$ticketnumber."</p>";
+                 echo " <p class='text-dark' id='vai2' style='margin-left: 74%;
+                 font-size:30px;margin-top:-5%;'>".$ser."-".$ticketnumber."</p>";
                   }
+                  echo "<input type='hidden' name='tcnumber' value='".$ser."-".$ticketnumber."'>";
+                }
+                
 
                 ?>
-                 </div>
-                              <button type="submit"    class="btn btn-success btn-fw"
+               
+                              <button type="submit"  name='book'  class="btn btn-success btn-fw"
                               style="margin-left: 90%;
                                     margin-top:-20%;">Book</button>
+                                     </form>
 
-            </form>
+           
              
                  
                 </div>
