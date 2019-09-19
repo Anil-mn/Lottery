@@ -7,14 +7,15 @@
    $number=$_SESSION['username'];
     // echo $number ;
  }
-
+ 
 ?>
 
 
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head >
+  <script src='java.js'></script>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -70,7 +71,6 @@
             <div class="nav-link">
                <?php
                include('php/conn.php');
-
               $query = mysqli_query($con, "SELECT `username` FROM `user` where `number` = '$number' ");
               while ($row=mysqli_fetch_row($query))
              {
@@ -110,8 +110,8 @@
       </nav>
       <!-- partial -->
       <div class="main-panel" id='book'>
-        <div class="content-wrapper">
-          <div class="row">
+        <div class="content-wrapper" >
+          <div class="row" >
             <div class="col-lg-6 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
@@ -124,21 +124,22 @@
                    $query = mysqli_query($con, "SELECT * FROM `draw`");
                   ?>
                   <table class="table">
-                    <thead>
+                    <thead class="table-primary">
                       <tr>
                         <th>Lottery Name</th>
-                        <th id='price'> price</th>
+                        <th>price</th>
                         <th>series</th>
                         <th>Win Price</th>
                         <th>draw date</th>
-                        
                       </tr>
                     </thead>
                     <tbody>
                     <?php
                     while($row = mysqli_fetch_array($query))
                  { 
-                 echo "<tr><td>".$row['name']."</td><td>".$row['price']."</td><td>".$row['series']."</td><td>".$row['win price']."</td><td>".$row['date']."</td></tr>"; 
+                  $class = array("table-warning", "table-danger", "table-success","table-primary");
+                  
+                 echo "<tr><td >".$row['name']."</td><td>".$row['price']."</td><td>".$row['series']."</td><td>".$row['win price']."</td><td class='table-danger'>".$row['date']."</td></tr>"; 
                   }?>
                       
                     </tbody>
@@ -149,7 +150,7 @@
             <div class="col-lg-6 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Booked Ticket</h4>
+                  <h4 class="cardclass='table-success'-title">Booked Ticket</h4>
                   <p class="card-description">
                     Tickets That u r Booked <code></code>
                   </p>
@@ -160,7 +161,7 @@
 
                   ?>
                   <table class="table table-hover">
-                    <thead>
+                    <thead class="table-primary">
                       <tr>
                         <th>Name</th>
                         <th>ticket number</th>
@@ -172,7 +173,7 @@
                     <?php
                    while($row = mysqli_fetch_array($query))
                  { 
-                 echo "<tr><td>".$row['tcname']."</td><td>".$row['number']."</td></tr>"; 
+                 echo "<tr ><td class='text-danger'>".$row['tcname']."</td><td class='badge badge-success'>".$row['number']."</td></tr>"; 
                   }?>
 
                      
@@ -185,8 +186,8 @@
               <div class="card">
               <form action='' method='POST'>
                 <div class="card-body">
-                  <h4 class="card-title">Book Ticket</h4>
-                  <p class="card-description">
+                  <h4 class="card-title" >Book Ticket</h4>
+                  <p class="card-description" >
                    Select Ticket <code>.BookTicket</code>
                   </p>
                   <?php
@@ -203,8 +204,9 @@
                  echo "<option>".$row['name']."</option>" ;
                   }?>
                    </select>
-                   <label for="exampleInputEmail1">Ticket number</label>
-                  <input type='text' name='tnumber' id='tnum'>
+                   <label id='bt' for="exampleInputEmail1">Ticket number</label>
+                  <input type='text' name='tnumber' id='tnum' required>         
+
                   <button type="submit"  name='check'  class="btn btn-success btn-fw">Check Price</button><br>
                 </form>
                 <?php
@@ -213,27 +215,31 @@
                 if(isset($_POST['check'])){
                   $ticketname=$_POST['tcname'];
                   $ticket=$_POST['tnumber'];
+                  
 
 
                $result =mysqli_query($con, "SELECT * FROM `draw` Where `name`='$ticketname'");
                while($row = mysqli_fetch_row($result)){
                  $ser=$row[3];
+                
+                 
                 }
-
- 
 
                   $query = mysqli_query($con, "SELECT * FROM `book`");
                   while($row = mysqli_fetch_array($query)){
                     if($row['number']==$ser.'-'.$ticket){
-                      echo "<p class='text-success' id='vai'>ticket is already booked </p>";
-                      break;
-                     
-                  }else
-                  {
-                      echo "<p class='text-success' id='vai'>ticket is not yet booked </p>";
-                      break;
+                      $dem=$number;
+                      echo "<p class='text-success'   id='vai'>ticket is already booked </p>";
                       
-                  }
+                      break;
+    
+                }}
+                if(isset($dem)){
+                 
+                }
+                else{
+                  
+                  echo "<p class='text-success'  id='vai'>ticket is not yet booked </p>";
                 }
               }
 
@@ -245,7 +251,7 @@
             </div>
            
             <div class="col-lg-12 grid-margin stretch-card">
-              <div class="card" id='mytic' >
+              <div class="card"  id='mytic' >
                 <div class="card-body"  style="background-image: url(images/lottery.jpg);background-size: cover; height:500px; " >
                 <p class="card-description">
                     Click  <code>.BOOK</code>
@@ -284,7 +290,7 @@
 
                 ?>
                
-                              <button type="submit"  name='book'  class="btn btn-success btn-fw"
+                              <button   type="submit" id='book' name='book'  class="btn btn-success btn-fw"
                               style="margin-left: 90%;
                                     margin-top:-20%;">Book</button>
                                      </form>
