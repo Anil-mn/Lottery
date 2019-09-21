@@ -15,15 +15,22 @@ $number=$_POST['tcnumber'];
 echo $tcname;
 echo $number;
 
+$result =mysqli_query($con, "SELECT * FROM `draw` Where `name`='$tcname'");
+               while($row = mysqli_fetch_row($result)){
+                 $ser=$row[3];
+                
+                 
+                }
 
-$query="UPDATE `draw` SET `date`='$number' WHERE `name`='$tcname' ";
+
+$ticketname=$ser.'-'.$number;
+echo $ticketname;
+$query="UPDATE `draw` SET `Lwintc`='$ticketname' WHERE `name`='$tcname' ";
+
+
 
 $result=mysqli_query($con,$query);
 echo $result;
 echo $query;
 header('Location:../admin.php');
-
-           
-
 ?>
-

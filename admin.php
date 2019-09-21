@@ -163,8 +163,7 @@
                       <tr>
                       <th>id</th>
                         <th>Username</th>
-                        <th>Phone Number.</th>
-                        
+                        <th>Phone Number.</th>                        
                         <th>password</th>
                       </tr>
                     </thead>
@@ -277,8 +276,57 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+        </div>  <br> <br> 
+        
+        
+        <div class="col-lg-12 grid-margin stretch-card">
+              <div class="card" id='mytic' >
+              <form action='php/upDraw.php' method='Post'>
+                <div class="card-body"   >
+                <p class="card-description">
+                    Details of Booked tickets <code></code>
+                  </p>
+                  <?php
+				  include('php/conn.php');
+                  $query = mysqli_query($con, "SELECT * FROM `book`");
+                  ?>
+                   <h4 class="card-title">Book Ticket</h4>
+                  <p class="card-description">
+                   Select Ticket <code>.BookTicket</code>
+                  </p>
+                  <?php
+				           include('php/conn.php');
+                   $query = mysqli_query($con, "SELECT * FROM `draw`");
+                  ?>
+                 
+                  <label for="exampleInputEmail1">Ticket name</label>
+                  <select id='ticket'   name='tcname' class='form-control' aria-placeholder='ticket type'>
+                
+                  <?php
+                  
+                  while($row = mysqli_fetch_array($query))
+                 { 
+                 echo "<option>".$row['name']."</option>" ;
+                  }?>
+                   </select>
+                   <label for="exampleInputEmail1">Enter The won ticket number</label><br>
+                  <input type='text' minlength='5' maxlength='5' name='tcnumber' id='tnum'><br>
+                  <button type="submit" class="btn btn-success">
+                  <i class="mdi mdi-cloud-download"></i>Upload</button><br>
+                 
+                </form>
+                
+               <?php
+              
+               
+               ?>
+              </div>
+            </div>
+            </div>
+            </form>
+            </div>
+
+
         <!-- content-wrapper ends -->
         <!-- partial:../../partials/_footer.html -->
         <footer class="footer">

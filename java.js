@@ -1,6 +1,4 @@
-
-load=()=>{
-    
-    document.getElementById('book').style.visibility='hidden'
-
+//var num=document.getElementById('tnum').value
+function demo(){
+alert('hlo')
 }

@@ -1,4 +1,5 @@
 <?php
+
  SESSION_START();
  if(!isset($_SESSION['username'])){
 	header('location:index.html');
@@ -196,7 +197,7 @@
                   ?>
                  
                   <label for="exampleInputEmail1">Ticket name</label>
-                  <select id='ticket'   name='tcname' class='form-control' aria-placeholder='ticket type'>
+                  <select id='ticket'    name='tcname' class='form-control' aria-placeholder='ticket type'>
                 
                   <?php
                   while($row = mysqli_fetch_array($query))
@@ -205,7 +206,7 @@
                   }?>
                    </select>
                    <label id='bt' for="exampleInputEmail1">Ticket number</label>
-                  <input type='text' name='tnumber' id='tnum' required>         
+                  <input type='text' minlength='5' maxlength='5' name='tnumber' id='tnum' required>         
 
                   <button type="submit"  name='check'  class="btn btn-success btn-fw">Check Price</button><br>
                 </form>
@@ -229,7 +230,7 @@
                   while($row = mysqli_fetch_array($query)){
                     if($row['number']==$ser.'-'.$ticket){
                       $dem=$number;
-                      echo "<p class='text-success'   id='vai'>ticket is already booked </p>";
+                      echo "<p class='text-danger'   id='vai'>ticket is already booked </p>";
                       
                       break;
     
