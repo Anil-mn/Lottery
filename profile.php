@@ -10,17 +10,15 @@
  }
  
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head >
   <script src='java.js'></script>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Kerala Lottery</title>
+  <link href="images/icons/icon-google.png" rel="icon" type="image/png">
   <!-- plugins:css -->
   <link rel="stylesheet" href="node_modules/mdi/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="node_modules/simple-line-icons/css/simple-line-icons.css">
@@ -30,17 +28,15 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="css/style.css">
   <!-- endinject -->
-  <link rel="shortcut icon" href="images/favicon.png" />
+  <link rel="shortcut icon" href="images/lottery.jpg" />
   <!-- Linking of javaScript-->
-  
-</head>
-
+  </head>
 <body >
   <div class="container-scroller">
     <!-- partial:../../partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
-        <a class="navbar-brand brand-logo" href="../../index.html"><img src="images/logo.svg" alt="logo"/></a>
+        <a class="navbar-brand brand-logo" href="#"><img src="images/lottery.jpg" alt="logo"/></a>
         <a class="navbar-brand brand-logo-mini" href="../../index.html"><img src="/images/logo-mini.svg" alt="logo"/></a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center">
@@ -52,11 +48,10 @@
             <a href="#draw" class="nav-link"><i class="mdi mdi-email-outline"></i>Draw</a>
           </li>
           <li class="nav-item">
-            <a href="#tick" class="nav-link"><i class="mdi mdi-calendar"></i>myTicket</a>
+            <a href="#ticket" class="nav-link"><i class="mdi mdi-calendar"></i>myTicket</a>
           </li>
         </ul>
-        <ul class="navbar-nav navbar-nav-right">
-         
+        <ul class="navbar-nav navbar-nav-right">   
         </ul>
         <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
           <span class="icon-menu"></span>
@@ -73,11 +68,9 @@
                <?php
                include('php/conn.php');
               $query = mysqli_query($con, "SELECT `username` FROM `user` where `number` = '$number' ");
-              while ($row=mysqli_fetch_row($query))
-             {
-                
-                echo "<div class='profile-image'> <img src='images/". $row[0].".jpg' alt='image'/> <span class='online-status online'></span> </div>" ;
-             }
+              while ($row=mysqli_fetch_row($query)){
+                echo "<div class='profile-image'> <img src='images/".$row[0].".jpg' alt='image'/> <span class='online-status online'></span> </div>" ;
+            }
 
               ?> 
              <!-- <div class="profile-image"> <img src="images/AnilNambuthiripad.jpg" alt="image"/> <span class="online-status online"></span> </div>  -->
@@ -92,21 +85,21 @@
           {
              echo '<p class="name">'. $row[0].'</p>';
           }
-
-?>
-                
+?>                
                 <p class="designation">User</p>
-                <div class="badge badge-teal mx-auto mt-3">Online</div>
+                <div class="badge badge-teal mx-auto mt-3" >Change Image</div>
+                <!-- <form action="php/upload.php" method="post" enctype="multipart/form-data">
+               <input type="file" name="fileToUpload" placeholder='change image' id="fileToUpload"><br>
+                <input type="submit" value="Upload Image" name="submit">
+              </form> -->
               </div>
             </div>
           </li>
-          <li class="nav-item"><a class="nav-link" href="../../index.html"><img class="menu-icon" src="images/menu_icons/01.png" alt="menu icon"><span class="menu-title">BookTicket</span></a></li>
-          <li class="nav-item"><a class="nav-link" href="../../pages/widgets.html"><img class="menu-icon" src="images/menu_icons/02.png" alt="menu icon"><span class="menu-title">TicketInfo</span></a></li>
-          <li class="nav-item"><a class="nav-link" href="../../pages/ui-features/buttons.html"><img class="menu-icon" src="images/menu_icons/03.png" alt="menu icon"><span class="menu-title">profile</span></a></li>
-         
-          </li>
-          
-          <li class="nav-item purchase-button"><a class="nav-link" href="php/logout.php" target="_blank">Logout</a></li>
+          <li class="nav-item"><a class="nav-link" href="#book"><img class="menu-icon" src="images/menu_icons/01.png" alt="menu icon"><span class="menu-title">BookTicket</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="#ticket"><img class="menu-icon" src="images/menu_icons/02.png" alt="menu icon"><span class="menu-title">TicketInfo</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="#de"><img class="menu-icon" src="images/menu_icons/03.png" alt="menu icon"><span class="menu-title">profile</span></a></li>
+          </li> 
+          <li class="nav-item purchase-button"><a class="nav-link" href="php/logout.php" >Logout</a></li>
         </ul>
       </nav>
       <!-- partial -->
@@ -141,8 +134,7 @@
                   $class = array("table-warning", "table-danger", "table-success","table-primary");
                   
                  echo "<tr><td >".$row['name']."</td><td>".$row['price']."</td><td>".$row['series']."</td><td>".$row['win price']."</td><td class='table-danger'>".$row['date']."</td></tr>"; 
-                  }?>
-                      
+                  }?>  
                     </tbody>
                   </table>
                 </div>
@@ -158,7 +150,6 @@
                   <?php
 				           include('php/conn.php');
                    $query = mysqli_query($con, "SELECT * FROM `book` where `phno`=$number");
-                  
 
                   ?>
                   <table class="table table-hover">
@@ -268,10 +259,10 @@
                 $query = mysqli_query($con, "SELECT * FROM `draw` Where `name`='$ticketname'");
                 while($row = mysqli_fetch_row($query)){
                 echo "<div class='form-group' >
-                <p class='text-dark' style='font-size:50px ' id='Rupees'>".$row[2]."</p>
+                <p class='text-dark' style='font-size:50px ' id='Rupees'>ടിക്കറ്റ് വില ".$row[2]."</p>
                 </div>";
                 echo "<div class='form-group' >
-                <p class='text-dark' style='font-size:50px' id='Rupees'>".$row[4]."</p>
+                <p class='text-dark' style='font-size:50px' id='Rupees'>സമ്മാനത്തുക ".$row[4]."</p>
                </div>";
                $result =mysqli_query($con, "SELECT * FROM `draw` Where `name`='$ticketname'");
                while($row = mysqli_fetch_row($result)){
@@ -297,7 +288,7 @@
                                      </form>
                 </div>
               </div>
-            </div>
+            <!-- </div>
             <div class="col-lg-12 stretch-card">
               <div class="card">
                 <div class="card-body">
@@ -416,7 +407,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
         <!-- content-wrapper ends -->
         <!-- partial:../../partials/_footer.html -->

@@ -28,7 +28,7 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="css/style.css">
   <!-- endinject -->
-  <link rel="shortcut icon" href="images/favicon.png" />
+  <link rel="shortcut icon" href="images/lottery.jpg" />
   <!-- Linking of javaScript-->
   
 </head>
@@ -38,7 +38,7 @@
     <!-- partial:../../partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
-        <a class="navbar-brand brand-logo" href="../../index.html"><img src="images/logo.svg" alt="logo"/></a>
+        <a class="navbar-brand brand-logo" href="../../index.html"><img src="images/lottery.jpg" alt="logo"/></a>
         <a class="navbar-brand brand-logo-mini" href="../../index.html"><img src="/images/logo-mini.svg" alt="logo"/></a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center">
@@ -93,18 +93,18 @@
           }
 
 ?>
-        <p class="designation">User</p>
+        <p class="designation">Admin</p>
                 <div class="badge badge-teal mx-auto mt-3">Online</div>
               </div>
             </div>
           </li>
-          <li class="nav-item"><a class="nav-link" href="../../index.html"><img class="menu-icon" src="images/menu_icons/01.png" alt="menu icon"><span class="menu-title">BookTicket</span></a></li>
-          <li class="nav-item"><a class="nav-link" href="../../pages/widgets.html"><img class="menu-icon" src="images/menu_icons/02.png" alt="menu icon"><span class="menu-title">TicketInfo</span></a></li>
-          <li class="nav-item"><a class="nav-link" href="../../pages/ui-features/buttons.html"><img class="menu-icon" src="images/menu_icons/03.png" alt="menu icon"><span class="menu-title">profile</span></a></li>
+          <li class="nav-item"><a class="nav-link" href=""><img class="menu-icon" src="images/menu_icons/01.png" alt="menu icon"><span class="menu-title">BookTicket</span></a></li>
+          <li class="nav-item"><a class="nav-link" href=""><img class="menu-icon" src="images/menu_icons/02.png" alt="menu icon"><span class="menu-title">TicketInfo</span></a></li>
+          <li class="nav-item"><a class="nav-link" href=""><img class="menu-icon" src="images/menu_icons/03.png" alt="menu icon"><span class="menu-title">profile</span></a></li>
          
           </li>
           
-          <li class="nav-item purchase-button"><a class="nav-link" href="php/logout.php" target="_blank">Logout</a></li>
+          <li class="nav-item purchase-button"><a class="nav-link" href="php/logout.php" >Logout</a></li>
         </ul>
       </nav>
       <!-- partial -->
