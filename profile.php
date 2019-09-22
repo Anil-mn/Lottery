@@ -31,7 +31,7 @@
   <link rel="shortcut icon" href="images/lottery.jpg" />
   <!-- Linking of javaScript-->
   </head>
-<body >
+<body onload='load()'>
   <div class="container-scroller">
     <!-- partial:../../partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
@@ -87,20 +87,33 @@
           }
 ?>                
                 <p class="designation">User</p>
-                <div class="badge badge-teal mx-auto mt-3" >Change Image</div>
-                <!-- <form action="php/upload.php" method="post" enctype="multipart/form-data">
-               <input type="file" name="fileToUpload" placeholder='change image' id="fileToUpload"><br>
-                <input type="submit" value="Upload Image" name="submit">
-              </form> -->
+                <div class="badge badge-teal mx-auto mt-3">Online</div>
+                
+              
               </div>
             </div>
+            
           </li>
           <li class="nav-item"><a class="nav-link" href="#book"><img class="menu-icon" src="images/menu_icons/01.png" alt="menu icon"><span class="menu-title">BookTicket</span></a></li>
           <li class="nav-item"><a class="nav-link" href="#ticket"><img class="menu-icon" src="images/menu_icons/02.png" alt="menu icon"><span class="menu-title">TicketInfo</span></a></li>
-          <li class="nav-item"><a class="nav-link" href="#de"><img class="menu-icon" src="images/menu_icons/03.png" alt="menu icon"><span class="menu-title">profile</span></a></li>
-          </li> 
+          <li class="nav-item"><a class="nav-link" onclick='one()'><img class="menu-icon" src="images/menu_icons/03.png" alt="menu icon"><span class="menu-title">profile</span></a></li>
+          </li>
+          <script>
+          function load(){
+            document.getElementById("nene").style.visibility='hidden';
+          }
+          function one(){
+            
+         document.getElementById("nene").style.visibility='visible';}
+         </script> 
+         <form  action="php/upload.php" method="post" id='nene' enctype="multipart/form-data">
+               <input type="file"   name="fileToUpload" id="fileToUpload"><br>
+                <input type="submit" class="file-upload-browse btn btn-info" value="Upload Image" name="submit">
+              </form>
           <li class="nav-item purchase-button"><a class="nav-link" href="php/logout.php" >Logout</a></li>
         </ul>
+
+        
       </nav>
       <!-- partial -->
       <div class="main-panel" id='book'>
