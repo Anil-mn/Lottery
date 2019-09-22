@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 13, 2019 at 05:53 PM
+-- Generation Time: Sep 22, 2019 at 12:01 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -43,7 +43,10 @@ INSERT INTO `book` (`id`, `phno`, `tcname`, `number`) VALUES
 (53, '9746903914', 'win win', 'kc-112345'),
 (54, '9746903914', 'Akshaya', 'AK-112345'),
 (55, '9746903914', 'pournami', 'pc-112345'),
-(56, '9876543210', 'Akshaya', 'AK-12365');
+(56, '9876543210', 'Akshaya', 'AK-12365'),
+(57, '9876543210', 'sthre shakthi', 'SS-65412'),
+(58, '9876543210', 'win win', 'kc-12345'),
+(59, '9400785640', 'pournami', 'pc-78546');
 
 -- --------------------------------------------------------
 
@@ -66,11 +69,11 @@ CREATE TABLE `draw` (
 --
 
 INSERT INTO `draw` (`id`, `name`, `price`, `series`, `win price`, `date`, `Lwintc`) VALUES
-(1, 'win win', '60 rs', 'kc', '1 cr', '2019-09-10', ''),
-(2, 'Monsoon Bumper', '50 rs', 'mc', '60 L', '2019-09-26', ''),
-(3, 'pournami', '40 rs', 'pc', '50 L', '2019-10-01', ''),
-(4, 'sthre shakthi', '70 rs', 'SS', '70 L', '2019-09-24', ''),
-(5, 'Akshaya', '100 rs', 'AK', '2 cr', '2019-09-19', '');
+(1, 'win win', '60 rs', 'kc', '1 cr', '2019-09-10', 'kc-12345'),
+(2, 'Monsoon Bumper', '50 rs', 'mc', '60 L', '2019-09-26', 'mc-12345'),
+(3, 'pournami', '40 rs', 'pc', '50 L', '2019-10-01', 'pc-12345'),
+(4, 'sthre shakthi', '70 rs', 'SS', '70 L', '2019-09-26', 'SS-12345'),
+(5, 'Akshaya', '100 rs', 'AK', '2 cr', '2019-09-19', 'AK-3265');
 
 -- --------------------------------------------------------
 
@@ -94,7 +97,8 @@ INSERT INTO `user` (`id`, `username`, `number`, `password`) VALUES
 (20, 'Amitha S', '9876543210', 'amitha123'),
 (21, 'sona@sona.com', '9876544321', 'kuttytharav'),
 (22, 'Seena ', '1234567890', 'seena123'),
-(23, 'admin', 'admin', 'admin');
+(23, 'admin', 'admin', 'admin'),
+(24, 'mini', '9400785640', 'mini123');
 
 --
 -- Indexes for dumped tables
@@ -126,7 +130,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `book`
 --
 ALTER TABLE `book`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 --
 -- AUTO_INCREMENT for table `draw`
 --
@@ -136,7 +140,7 @@ ALTER TABLE `draw`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
