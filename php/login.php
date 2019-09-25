@@ -3,6 +3,7 @@ require_once('conn.php');// connection to local host
 SESSION_START();
 $number = $_POST["username"];
 $password = $_POST["pass"];
+
 if($username =='admin' && $password=='admin'){
 	header('location: ../admin.php');
 }
@@ -17,7 +18,7 @@ if(isset($check)){
 		 else{header('location: ../profile.php');}
 		
 	}
-	    else header('Location:../login.html');{
+	    else header('Location:../index.html');{
 		
 	}
 }

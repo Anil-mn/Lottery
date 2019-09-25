@@ -134,10 +134,9 @@
                     <thead class="table-primary">
                       <tr>
                         <th>Lottery Name</th>
-                        <th>price</th>
                         <th>series</th>
-                        <th>Win Price</th>
-                        <th>draw date</th>
+                        <th>last won ticket number</th>
+                        <th>Win price</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -146,7 +145,7 @@
                  { 
                   $class = array("table-warning", "table-danger", "table-success","table-primary");
                   
-                 echo "<tr><td >".$row['name']."</td><td>".$row['price']."</td><td>".$row['series']."</td><td>".$row['win price']."</td><td class='table-danger'>".$row['date']."</td></tr>"; 
+                 echo "<tr><td >".$row['name']."</td><td>".$row['series']."</td><td class='table-danger'>".$row['Lwintc']."</td><td>".$row['win price']."</td></tr>"; 
                   }?>  
                     </tbody>
                   </table>
@@ -187,6 +186,63 @@
                 </div>
               </div>
             </div>
+            
+
+            <div class="col-lg-12 stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Table with Won Ticket and all information</h4>
+                  <p class="card-description">
+                    Add class <code>.table-{color}</code>
+                  </p>
+                  <?php
+				           include('php/conn.php');
+                   $query = mysqli_query($con, "SELECT * FROM `draw`");
+                   $number=$_SESSION['username'];
+                   $result = mysqli_query($con, "SELECT * FROM `book`");
+                   
+
+                   
+
+                  ?>
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                   
+                        <th>
+                         Ticket name
+                        </th> <th>
+                         Ticket Price
+                        </th>
+                        <th>
+                          Ticket series
+                        </th>
+                        <th>
+                          nextDrawDate
+                        </th>
+                        <th>
+                          Win price
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+                  
+                    while($row = mysqli_fetch_array($query))
+                 { 
+                   
+                   echo "<td >".$row['name']."</td><td>".$row['price']."</td><td>".$row['series']."</td><td>".$row['date']."</td><td>".$row['win price']."</td></tr>"; 
+                  }?>  
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+        
+        
+
+
+
             <div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
               <form action='' method='POST'>
@@ -301,127 +357,57 @@
                                      </form>
                 </div>
               </div>
-            <!-- </div>
-            <div class="col-lg-12 stretch-card">
+           </div>
+            <!-- <div class="col-lg-12 stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Table with contextual classes</h4>
+                  <h4 class="card-title">Table with Won Ticket and all information</h4>
                   <p class="card-description">
                     Add class <code>.table-{color}</code>
                   </p>
+                  <?php
+				           include('php/conn.php');
+                   $query = mysqli_query($con, "SELECT * FROM `draw`");
+                   $number=$_SESSION['username'];
+                   $result = mysqli_query($con, "SELECT * FROM `book`");
+                   
+
+                   
+
+                  ?>
                   <table class="table table-bordered">
                     <thead>
                       <tr>
+                   
                         <th>
-                          #
+                         Ticket name
                         </th>
                         <th>
-                          First name
+                          Ticket series
                         </th>
                         <th>
-                          Product
+                          last won ticket number
                         </th>
                         <th>
-                          Amount
-                        </th>
-                        <th>
-                          Deadline
+                          Win price
                         </th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr class="table-info">
-                        <td>
-                          1
-                        </td>
-                        <td>
-                          Herman Beck
-                        </td>
-                        <td>
-                          Photoshop
-                        </td>
-                        <td>
-                          $ 77.99
-                        </td>
-                        <td>
-                          May 15, 2015
-                        </td>
-                      </tr>
-                      <tr class="table-warning">
-                        <td>
-                          2
-                        </td>
-                        <td>
-                          Messsy Adam
-                        </td>
-                        <td>
-                          Flash
-                        </td>
-                        <td>
-                          $245.30
-                        </td>
-                        <td>
-                          July 1, 2015
-                        </td>
-                      </tr>
-                      <tr class="table-danger">
-                        <td>
-                          3
-                        </td>
-                        <td>
-                          John Richards
-                        </td>
-                        <td>
-                          Premeire
-                        </td>
-                        <td>
-                          $138.00
-                        </td>
-                        <td>
-                          Apr 12, 2015
-                        </td>
-                      </tr>
-                      <tr class="table-success">
-                        <td>
-                          4
-                        </td>
-                        <td>
-                          Peter Meggik
-                        </td>
-                        <td>
-                          After effects
-                        </td>
-                        <td>
-                          $ 77.99
-                        </td>
-                        <td>
-                          May 15, 2015
-                        </td>
-                      </tr>
-                      <tr class="table-primary">
-                        <td>
-                          5
-                        </td>
-                        <td>
-                          Edward
-                        </td>
-                        <td>
-                          Illustrator
-                        </td>
-                        <td>
-                          $ 160.25
-                        </td>
-                        <td>
-                          May 03, 2015
-                        </td>
-                      </tr>
+                    <?php
+                  
+                    while($row = mysqli_fetch_array($query))
+                 { 
+                   
+                   echo "<td >".$row['name']."</td><td>".$row['price']."</td><td>".$row['Lwintc']."</td><td>".$row['win price']."</td></tr>"; 
+                  }?>  
                     </tbody>
                   </table>
                 </div>
               </div>
             </div>
-          </div> -->
-        </div>
+          </div> 
+        </div> -->
         <!-- content-wrapper ends -->
         <!-- partial:../../partials/_footer.html -->
         <footer class="footer">

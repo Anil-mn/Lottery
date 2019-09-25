@@ -9,11 +9,8 @@
  }
 
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -70,7 +67,7 @@
             <div class="nav-link">
                <?php
                include('php/conn.php');
-
+               // loading dp in profile
               $query = mysqli_query($con, "SELECT `username` FROM `user` where `number` = '$number' ");
               while ($row=mysqli_fetch_row($query))
              {
@@ -85,7 +82,7 @@
                 <?php
 
             include('php/conn.php');
-
+             // loading user name in profile
             $query = mysqli_query($con, "SELECT `username` FROM `user` where `number` = '$number' ");
            while ($row=mysqli_fetch_row($query))
           {
@@ -155,8 +152,6 @@
                   <?php
 				  include('php/conn.php');
                    $query = mysqli_query($con, "SELECT * FROM `user`");
-                  
-
                   ?>
                  <table class="table">
                     <thead>
@@ -202,7 +197,7 @@
                    <label for="exampleInputEmail1">Select next draw Date</label>
                   <input type='date' name='tcnumber' id='tnum'>
                   <button type="submit"  name='check'  class="btn btn-success btn-fw">Check Price</button><br>
-                  <button type="submit" name='confirm'  class="btn btn-success btn-fw" >Confirm</button>
+                  <!-- <button type="submit" name='confirm'  class="btn btn-success btn-fw" >Confirm</button> -->
                 </form>
                 
                <?php
