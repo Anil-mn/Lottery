@@ -4,12 +4,10 @@ function one(x){
     return document.getElementById(x); //function for all getelement
 }
 load=()=>{
-    
      document.getElementById('demo').style.visibility='hidden';
      document.getElementById('bi').style.visibility='hidden';
      document.getElementById('btn').style.visibility='hidden';
      //Hidding elements
-
 }
 price=()=>{
     //price validation of lotteries
@@ -47,9 +45,7 @@ price=()=>{
         document.getElementById('btn').style.visibility='hidden';
         document.getElementById('ne').style.visibility='hidden';
         document.getElementById('vai2').style.visibility='hidden';
-        
-
-
+    
 }
 vai=()=>{
     //availability of lottery number

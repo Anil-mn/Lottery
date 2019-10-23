@@ -1,5 +1,5 @@
 <?php
-require_once('conn.php');// connection to local host
+require_once('conn.php');// connection to localhost
 SESSION_START();
 $number = $_POST["username"];
 $password = $_POST["pass"];
@@ -18,7 +18,9 @@ if(isset($check)){
 		 else{header('location: ../profile.php');}
 		
 	}
-	    else header('Location:../index.html');{
-		
+	
+	    else{
+			echo "<script>alert('wrong password')</script>";
+			header('Location:../index.html');
 	}
 }

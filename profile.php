@@ -179,15 +179,11 @@
                  { 
                  echo "<tr ><td class='text-danger'>".$row['tcname']."</td><td class='badge badge-success'>".$row['number']."</td></tr>"; 
                   }?>
-
-                     
                     </tbody>
                   </table>
                 </div>
               </div>
             </div>
-            
-
             <div class="col-lg-12 stretch-card">
               <div class="card">
                 <div class="card-body">
@@ -200,15 +196,10 @@
                    $query = mysqli_query($con, "SELECT * FROM `draw`");
                    $number=$_SESSION['username'];
                    $result = mysqli_query($con, "SELECT * FROM `book`");
-                   
-
-                   
-
                   ?>
                   <table class="table table-bordered">
                     <thead>
                       <tr>
-                   
                         <th>
                          Ticket name
                         </th> <th>
@@ -227,8 +218,7 @@
                     </thead>
                     <tbody>
                     <?php
-                  
-                    while($row = mysqli_fetch_array($query))
+                  while($row = mysqli_fetch_array($query))
                  { 
                    
                    echo "<td >".$row['name']."</td><td>".$row['price']."</td><td>".$row['series']."</td><td>".$row['date']."</td><td>".$row['win price']."</td></tr>"; 
@@ -238,11 +228,6 @@
                 </div>
               </div>
             </div>
-        
-        
-
-
-
             <div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
               <form action='' method='POST'>
@@ -276,24 +261,16 @@
                 if(isset($_POST['check'])){
                   $ticketname=$_POST['tcname'];
                   $ticket=$_POST['tnumber'];
-                  
-
-
                $result =mysqli_query($con, "SELECT * FROM `draw` Where `name`='$ticketname'");
                while($row = mysqli_fetch_row($result)){
                  $ser=$row[3];
-                
-                 
                 }
-
                   $query = mysqli_query($con, "SELECT * FROM `book`");
                   while($row = mysqli_fetch_array($query)){
                     if($row['number']==$ser.'-'.$ticket){
                       $dem=$number;
                       echo "<p class='text-danger'   id='vai'>ticket is already booked </p>";
-                      
-                      break;
-    
+                      break;    
                 }}
                 if(isset($dem)){
                  

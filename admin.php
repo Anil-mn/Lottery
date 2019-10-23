@@ -27,9 +27,7 @@
   <!-- endinject -->
   <link rel="shortcut icon" href="images/lottery.jpg" />
   <!-- Linking of javaScript-->
-  
-</head>
-
+  </head>
 <body >
   <div class="container-scroller">
     <!-- partial:../../partials/_navbar.html -->
@@ -196,7 +194,7 @@
                    </select>
                    <label for="exampleInputEmail1">Select next draw Date</label>
                   <input type='date' name='tcnumber' id='tnum'>
-                  <button type="submit"  name='check'  class="btn btn-success btn-fw">Check Price</button><br>
+                  <button type="submit"  name='check'  class="btn btn-success btn-fw">update</button><br>
                   <!-- <button type="submit" name='confirm'  class="btn btn-success btn-fw" >Confirm</button> -->
                 </form>
                 
@@ -307,7 +305,7 @@
                    <label for="exampleInputEmail1">Enter The won ticket number</label><br>
                   <input type='text' minlength='5' maxlength='5' name='tcnumber' id='tnum'><br>
                   <button type="submit" class="btn btn-success">
-                  <i class="mdi mdi-cloud-download"></i>Upload</button><br>
+                  <i class="mdi mdi-cloud-download"></i>Update</button><br>
                  
                 </form>
                 
