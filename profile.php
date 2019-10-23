@@ -12,13 +12,11 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head >
-  <script src='java.js'></script>
+<head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Kerala Lottery</title>
-  <link href="images/icons/icon-google.png" rel="icon" type="image/png">
   <!-- plugins:css -->
   <link rel="stylesheet" href="node_modules/mdi/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="node_modules/simple-line-icons/css/simple-line-icons.css">

@@ -221,7 +221,7 @@
                     <thead>
                       <tr>
                       <th>id</th>
-                        <th >Phone Number</th>
+                        <th>Phone Number</th>
                         <th>Ticket Name</th>
                         <th>Ticket number</th>
                       </tr>
