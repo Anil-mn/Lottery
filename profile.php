@@ -218,7 +218,6 @@
                     <?php
                   while($row = mysqli_fetch_array($query))
                  { 
-                   
                    echo "<td >".$row['name']."</td><td>".$row['price']."</td><td>".$row['series']."</td><td>".$row['date']."</td><td>".$row['win price']."</td></tr>"; 
                   }?>  
                     </tbody>

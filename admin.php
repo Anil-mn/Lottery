@@ -174,9 +174,9 @@
               <div class="card">
               <form action='php/update.php' method='POST'>
                 <div class="card-body">
-                  <h4 class="card-title">Book Ticket</h4>
+                  <h4 class="card-title">Update draw date</h4>
                   <p class="card-description">
-                   Select Ticket <code>.BookTicket</code>
+                   Select Ticket <code>.Update draw date</code>
                   </p>
                   <?php
 				           include('php/conn.php');
@@ -238,7 +238,7 @@
             <div class="col-lg-12 stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Table with contextual classes</h4>
+                  <h4 class="card-title">Table with Result</h4>
                   <p class="card-description">
                     Add class <code>.table-{color}</code>
                   </p>
