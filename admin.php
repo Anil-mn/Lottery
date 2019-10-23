@@ -49,7 +49,6 @@
           </li>
         </ul>
         <ul class="navbar-nav navbar-nav-right">
-         
         </ul>
         <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
           <span class="icon-menu"></span>
@@ -69,16 +68,12 @@
               $query = mysqli_query($con, "SELECT `username` FROM `user` where `number` = '$number' ");
               while ($row=mysqli_fetch_row($query))
              {
-                
                 echo "<div class='profile-image'> <img src='images/". $row[0].".jpg' alt='image'/> <span class='online-status online'></span> </div>" ;
              }
-
               ?> 
              <!-- <div class="profile-image"> <img src="images/AnilNambuthiripad.jpg" alt="image"/> <span class="online-status online"></span> </div>  -->
               <div class="profile-name">
-               
                 <?php
-
             include('php/conn.php');
              // loading user name in profile
             $query = mysqli_query($con, "SELECT `username` FROM `user` where `number` = '$number' ");
@@ -86,7 +81,6 @@
           {
              echo '<p class="name">'. $row[0].'</p>';
           }
-
 ?>
         <p class="designation">Admin</p>
                 <div class="badge badge-teal mx-auto mt-3">Online</div>
@@ -121,11 +115,10 @@
                     <thead>
                       <tr>
                         <th>Lottery Name</th>
-                        <th id='price'> price</th>
+                        <th id='price'>price</th>
                         <th>series</th>
                         <th>Win Price</th>
                         <th>draw date</th>
-                        
                       </tr>
                     </thead>
                     <tbody>
